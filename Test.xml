@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.tencent.mobileqq" >
+	
+	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="9"/>
+
+	<application android:name="com.tencent.common.app.BaseApplicationImpl"
+		android:theme="@style/Default"
+		android:icon="@drawable/icon"
+		android:label="@string/app_name" >
+		
+		<service android:name="ServiceA" android:process="ProcessA" />
+        <service android:name="Service1" android:exported="false" />
+        <!-- <service android:name="Service2" android:exported="false" /> -->
+        <service android:name="ServiceB" android:process="ProcessB" />
+        <service android:name="ServiceC" android:process="ProcessC" />
+
+        <receiver android:name="ReceiverA" android:process="ProcessA" />
+        <receiver android:name="ReceiverB" android:process="ProcessB" />
+        <receiver android:name="ReceiverC" android:process="ProcessC" />
+        <!-- <receiver android:name="Receiver1" />-->
+        <receiver android:name="Receiver2" />
+        
+		<activity android:name="ActivityA" android:process="ProcessA" android:exported="false" />
+		<activity android:name="ActivityB" android:process="ProcessB" android:theme="@style/Default" />
+		<activity android:name="ActivityC" android:process="ProcessC"/>
+		<activity android:name="Activity1" />
+		<activity android:name="Activity2" />
+	    
+		<provider android:name="ProviderA" android:process="ProcessA" android:exported="false" />
+		<provider android:name="ProviderB" android:process="ProcessB" android:exported="false" />
+		<provider android:name="ProviderC" android:process="ProcessC" />
+		<provider android:name="Provider1" android:exported="false" />
+	</application>
+</manifest>
